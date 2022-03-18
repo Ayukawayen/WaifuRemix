@@ -1,0 +1,51 @@
+<!doctype html>
+	<head> 
+		<title>Smart Waifu Remix</title> 
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" type="text/css" href="style.css?03151738" />
+	</head>
+	<body>
+		<div id="app" state="1">
+			<ul>
+				<li class="hint">
+					<div state="1">
+						<p>Select the main Waifu by clicking the yellow block. (You must own the main Waifu or be approved)</p>
+						<p>And pick 3 Waifus as mixing models by clicking the white blocks. (Don't have to own or be approved)</p>
+						<p>(You may change them by clicking the blocks again.)</p>
+					</div>
+					<div state="2">
+						<p>Submit the finalists by clicking the button below and finish the transaction with Metamask to preview the 3 mixed results.</p>
+						<p>(You can't change the finalists once the submission-TX is confirmed.)</p>
+						<button onclick="onSubmitFinalistsClick()">Submit Finalists</button>
+					</div>
+					<div state="3">
+						<p>Select the image to mint from the 3 mixed images by clicking it.</p>
+						<p>(You may change the selected image by clicking another mixed image.)</p>
+					</div>
+					<div state="4">
+						<p>Click the button below and finish the transaction with Metamask to mint an NFT.</p>
+						<button onclick="onMintClick()">Mint NFT</button>
+					</div>
+					<!--
+					<button>Reset</button>
+					-->
+				</li>
+				
+				<li class="model" i="0"><div class="clickable" onclick="onPickModelClick(0)">Click to pick a model Waifu</div></li>
+				<li class="model" i="1"><div class="clickable" onclick="onPickModelClick(1)">Click to pick a model Waifu</div></li>
+				<li class="model" i="2"><div class="clickable" onclick="onPickModelClick(2)">Click to pick a model Waifu</div></li>
+			</ul>
+			<ul>
+				<li class="main"><div class="clickable" onclick="onSelectMainClick()">Click to select the main Waifu<br>(You must own the Waifu or be approved)</div></li>
+
+				<li class="mixed" i="0"><div class="clickable" onclick="onSelectMixedClick(0)">You can see the mixed result here after you submit the finalists</div></li>
+				<li class="mixed" i="1"><div class="clickable" onclick="onSelectMixedClick(1)">You can see the mixed result here after you submit the finalists</div></li>
+				<li class="mixed" i="2"><div class="clickable" onclick="onSelectMixedClick(2)">You can see the mixed result here after you submit the finalists</div></li>
+			</ul>
+		</div>
+	</body>
+	
+	<script src="https://cdn.ethers.io/lib/ethers-5.1.umd.min.js"></script>
+	<script src="adapter.js"></script>
+	<script src="script.js"></script>
+</html>
