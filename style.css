@@ -9,6 +9,11 @@ body {
 	background:#eee;
 }
 
+h1 {
+	padding:1em;
+	text-align:center;
+}
+
 #app { font-size:0; }
 
 #app {
